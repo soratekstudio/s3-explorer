@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-15
 **Status:** Approved
-**Based on:** [s3-viewfy](https://github.com/sohebcakewalk/s3-viewfy) (Next.js) → rewrite in React Router 7
+**Based on:** [s3-viewfy](https://github.com/soratekstudio/s3-viewfy) (Next.js) → rewrite in React Router 7
 
 ## Goals
 

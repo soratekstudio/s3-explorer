@@ -40,7 +40,7 @@ Set these environment variables in Railway:
 
 ```bash
 # Clone the repo
-git clone https://github.com/sohebcakewalk/s3-explorer.git
+git clone https://github.com/soratekstudio/s3-explorer.git
 cd s3-explorer
 
 # Install dependencies
