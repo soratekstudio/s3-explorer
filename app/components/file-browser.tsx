@@ -126,13 +126,13 @@ export function FileBrowser({
 
   return (
     <div
-      className="flex-1 flex flex-col min-w-0 relative"
+      className="flex-1 flex flex-col min-w-0 relative bg-background"
       onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
       onDragLeave={() => setDragOver(false)}
       onDrop={handleDrop}
     >
       {/* Toolbar */}
-      <div className="px-6 py-3 border-b border-border/40 bg-background/50 backdrop-blur-sm">
+      <div className="px-6 py-3 border-b border-border/40 bg-background backdrop-blur-sm">
         <div className="flex items-center justify-between">
           <BreadcrumbNav bucket={bucket} prefix={prefix} />
           <div className="flex items-center gap-2">
@@ -276,7 +276,7 @@ export function FileBrowser({
 
       {/* Footer */}
       {filteredObjects.length > 0 && (
-        <div className="px-6 py-2 border-t border-border/40 bg-background/50 flex items-center justify-between">
+        <div className="px-6 py-2 border-t border-border/40 bg-background flex items-center justify-between">
           <p className="text-[11px] text-muted-foreground">
             {filteredObjects.filter((o) => o.isFolder).length} folders,{" "}
             {filteredObjects.filter((o) => !o.isFolder).length} files
