@@ -1,21 +1,26 @@
 import { Moon, Sun } from "lucide-react";
 import { Button } from "~/components/ui/button";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export function ThemeToggle() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
 
   useEffect(() => {
-    const match = document.cookie.match(/theme=(light|dark)/);
-    setTheme(match ? (match[1] as "light" | "dark") : "dark");
+    // Read actual DOM state as source of truth
+    const isDark = document.documentElement.classList.contains("dark");
+    setTheme(isDark ? "dark" : "light");
   }, []);
 
-  const toggle = useCallback(() => {
-    const next = theme === "dark" ? "light" : "dark";
-    setTheme(next);
+  const toggle = () => {
+    const isDark = document.documentElement.classList.contains("dark");
+    const next = isDark ? "light" : "dark";
+    document.documentElement.classList.remove("dark", "light");
+    if (next === "dark") {
+      document.documentElement.classList.add("dark");
+    }
     document.cookie = `theme=${next};path=/;max-age=31536000`;
-    document.documentElement.classList.toggle("dark", next === "dark");
-  }, [theme]);
+    setTheme(next);
+  };
 
   return (
     <Button variant="ghost" size="icon" className="h-8 w-8" onClick={toggle}>
