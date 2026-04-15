@@ -20,7 +20,7 @@ AWS S3, MinIO, Cloudflare R2, DigitalOcean Spaces, Backblaze B2, Wasabi, and any
 
 ## Deploy to Railway
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/ykeiEB?referralCode=mHvVn-)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/XHCuv0?referralCode=mHvVn-)
 
 Set these environment variables in Railway:
 
