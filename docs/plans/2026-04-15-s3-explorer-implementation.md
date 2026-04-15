@@ -27,7 +27,7 @@
 **Step 1: Initialize the project**
 
 ```bash
-cd /Volumes/Personal/Clients/soratekstudio/s3explorer
+cd /Volumes/Personal/Clients/soratekstudio/s3-explorer
 npm init -y
 ```
 
@@ -573,7 +573,7 @@ const SESSION_SECRET = process.env.SESSION_SECRET || crypto.randomUUID();
 
 const sessionStorage = createCookieSessionStorage({
   cookie: {
-    name: "s3explorer_session",
+    name: "s3-explorer_session",
     httpOnly: true,
     maxAge: 60 * 60 * 24, // 24 hours
     path: "/",

@@ -4,7 +4,7 @@ const SESSION_SECRET = process.env.SESSION_SECRET || crypto.randomUUID();
 
 const sessionStorage = createCookieSessionStorage({
   cookie: {
-    name: "s3explorer_session",
+    name: "s3-explorer_session",
     httpOnly: true,
     maxAge: 60 * 60 * 24,
     path: "/",
