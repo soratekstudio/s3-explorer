@@ -11,7 +11,7 @@ interface HeaderProps {
 
 export function Header({ authEnabled, endpoint }: HeaderProps) {
   return (
-    <header className="h-14 border-b border-border bg-background flex items-center justify-between px-6">
+    <header className="h-14 border-b border-border bg-background text-foreground flex items-center justify-between px-6">
       <div className="flex items-center gap-3">
         <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-cyan-500 to-teal-500 flex items-center justify-center">
           <Database className="h-4 w-4 text-white" />
