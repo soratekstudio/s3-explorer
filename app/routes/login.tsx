@@ -73,7 +73,7 @@ export default function LoginPage() {
 
         <Form
           method="post"
-          className="space-y-4 bg-card backdrop-blur-xl border border-border rounded-2xl p-6 shadow-2xl"
+          className="space-y-4 bg-card text-card-foreground backdrop-blur-xl border border-border rounded-2xl p-6 shadow-2xl"
         >
           <div className="space-y-1.5">
             <Label htmlFor="username">Username</Label>
