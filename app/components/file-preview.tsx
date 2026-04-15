@@ -79,7 +79,7 @@ export function FilePreview({ bucket, fileKey, onClose }: FilePreviewProps) {
                 <iframe src={url} className="w-full h-[70vh] rounded-lg border" title={fileName} />
               )}
               {type === "text" && textContent !== null && (
-                <pre className="bg-muted/50 rounded-lg p-4 text-sm overflow-auto max-h-[70vh] whitespace-pre-wrap break-words font-mono">
+                <pre className="bg-muted/50 text-foreground rounded-lg p-4 text-sm overflow-auto max-h-[70vh] whitespace-pre-wrap break-words font-mono">
                   {textContent}
                 </pre>
               )}

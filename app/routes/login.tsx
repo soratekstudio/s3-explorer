@@ -51,7 +51,7 @@ export default function LoginPage() {
   const isSubmitting = navigation.state === "submitting";
 
   return (
-    <div className="flex min-h-screen items-center justify-center relative overflow-hidden bg-background">
+    <div className="flex min-h-screen items-center justify-center relative overflow-hidden bg-background text-foreground">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-[radial-gradient(circle,rgba(6,182,212,0.1),transparent)] rounded-full blur-3xl" />
         <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-[radial-gradient(circle,rgba(20,184,166,0.1),transparent)] rounded-full blur-3xl" />

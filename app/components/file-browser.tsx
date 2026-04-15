@@ -126,13 +126,13 @@ export function FileBrowser({
 
   return (
     <div
-      className="flex-1 flex flex-col min-w-0 relative bg-background"
+      className="flex-1 flex flex-col min-w-0 relative bg-background text-foreground"
       onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
       onDragLeave={() => setDragOver(false)}
       onDrop={handleDrop}
     >
       {/* Toolbar */}
-      <div className="px-6 py-3 border-b border-border bg-background backdrop-blur-sm">
+      <div className="px-6 py-3 border-b border-border bg-background text-foreground backdrop-blur-sm">
         <div className="flex items-center justify-between">
           <BreadcrumbNav bucket={bucket} prefix={prefix} />
           <div className="flex items-center gap-2">
@@ -155,7 +155,7 @@ export function FileBrowser({
 
         {/* Selection toolbar */}
         {selected.size > 0 && (
-          <div className="mt-2 flex items-center gap-3 bg-muted/50 rounded-lg px-3 py-2">
+          <div className="mt-2 flex items-center gap-3 bg-muted/50 text-foreground rounded-lg px-3 py-2">
             <span className="text-sm text-muted-foreground">{selected.size} selected</span>
             <Button variant="ghost" size="sm" className="h-7 gap-1.5 text-destructive" onClick={() => setDeleteTarget(Array.from(selected))}>
               <Trash2 className="h-3.5 w-3.5" />
@@ -276,7 +276,7 @@ export function FileBrowser({
 
       {/* Footer */}
       {filteredObjects.length > 0 && (
-        <div className="px-6 py-2 border-t border-border bg-background flex items-center justify-between">
+        <div className="px-6 py-2 border-t border-border bg-background text-foreground flex items-center justify-between">
           <p className="text-[11px] text-muted-foreground">
             {filteredObjects.filter((o) => o.isFolder).length} folders,{" "}
             {filteredObjects.filter((o) => !o.isFolder).length} files

@@ -20,7 +20,7 @@ export default function DashboardLayout() {
   const { buckets, defaultBucket, authEnabled, endpoint } = useLoaderData<typeof loader>();
 
   return (
-    <div className="flex flex-col h-screen bg-background">
+    <div className="flex flex-col h-screen bg-background text-foreground">
       <Header authEnabled={authEnabled} endpoint={endpoint} />
       <div className="flex flex-1 overflow-hidden">
         {!defaultBucket && <Sidebar buckets={buckets} />}

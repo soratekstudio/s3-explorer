@@ -22,7 +22,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className="min-h-screen antialiased">
+      <body className="min-h-screen antialiased bg-background text-foreground">
         {children}
         <Toaster position="bottom-right" richColors />
         <ScrollRestoration />
