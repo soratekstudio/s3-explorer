@@ -51,7 +51,7 @@ export default function LoginPage() {
   const isSubmitting = navigation.state === "submitting";
 
   return (
-    <div className="flex min-h-screen items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-100 via-gray-50 to-slate-100 dark:from-transparent dark:via-transparent dark:to-transparent">
+    <div className="flex min-h-screen items-center justify-center relative overflow-hidden bg-background">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-[radial-gradient(circle,rgba(6,182,212,0.1),transparent)] rounded-full blur-3xl" />
         <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-[radial-gradient(circle,rgba(20,184,166,0.1),transparent)] rounded-full blur-3xl" />
@@ -73,7 +73,7 @@ export default function LoginPage() {
 
         <Form
           method="post"
-          className="space-y-4 bg-white/90 dark:bg-card/80 backdrop-blur-xl border border-border/50 rounded-2xl p-6 shadow-2xl shadow-black/5 dark:shadow-black/30"
+          className="space-y-4 bg-card backdrop-blur-xl border border-border rounded-2xl p-6 shadow-2xl"
         >
           <div className="space-y-1.5">
             <Label htmlFor="username">Username</Label>
@@ -81,7 +81,7 @@ export default function LoginPage() {
               id="username"
               name="username"
               placeholder="Enter username"
-              className="h-11 bg-background/50 border-border/60 focus:border-cyan-500/50"
+              className="h-11 bg-background border-border focus:border-cyan-500"
               autoComplete="username"
               required
             />
@@ -94,7 +94,7 @@ export default function LoginPage() {
               name="password"
               type="password"
               placeholder="Enter password"
-              className="h-11 bg-background/50 border-border/60 focus:border-cyan-500/50"
+              className="h-11 bg-background border-border focus:border-cyan-500"
               autoComplete="current-password"
               required
             />

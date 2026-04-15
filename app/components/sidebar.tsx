@@ -10,8 +10,8 @@ interface SidebarProps {
 
 export function Sidebar({ buckets }: SidebarProps) {
   return (
-    <aside className="w-64 border-r border-border/40 bg-sidebar flex flex-col">
-      <div className="px-4 py-3 border-b border-border/40 flex items-center justify-between">
+    <aside className="w-64 border-r border-border bg-sidebar flex flex-col">
+      <div className="px-4 py-3 border-b border-border flex items-center justify-between">
         <span className="text-sm font-medium text-sidebar-foreground">Buckets</span>
       </div>
       <ScrollArea className="flex-1">
@@ -35,7 +35,7 @@ export function Sidebar({ buckets }: SidebarProps) {
           ))}
         </div>
       </ScrollArea>
-      <div className="px-4 py-2 border-t border-border/40">
+      <div className="px-4 py-2 border-t border-border">
         <p className="text-[11px] text-muted-foreground">{buckets.length} buckets</p>
       </div>
     </aside>
